@@ -9,7 +9,7 @@ from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
-from zerxis.invitations.models import JoinInvitation
+from zerxis_invitations.invitations.models import JoinInvitation
 from reversion import revisions as reversion
 from slugify import slugify
 
