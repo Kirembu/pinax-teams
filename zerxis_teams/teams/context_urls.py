@@ -5,7 +5,7 @@ from django.conf.urls import url
 
 from . import views
 
-app_name = "pinax_teams"
+app_name = "zerxis_teams"
 
 
 urlpatterns = [

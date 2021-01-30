@@ -23,7 +23,7 @@ def load_path_attr(path):
 class TeamAppConf(AppConf):
 
     PROFILE_MODEL = ""
-    HOOKSET = "pinax.teams.hooks.TeamDefaultHookset"
+    HOOKSET = "zerxis_teams.teams.hooks.TeamDefaultHookset"
     NAME_BLACKLIST = []
 
     def configure_profile_model(self, value):
@@ -34,4 +34,4 @@ class TeamAppConf(AppConf):
         return load_path_attr(value)()
 
     class Meta:
-        prefix = "pinax_teams"
+        prefix = "zerxis_teams"

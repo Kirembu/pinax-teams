@@ -52,7 +52,7 @@ setup(
     author="Pinax Team",
     author_email="team@pinaxproject.com",
     description="An app for Django sites that supports open, by invitation, and by application teams",
-    name="pinax-teams",
+    name="zerxis-teams",
     long_description=LONG_DESCRIPTION,
     version=VERSION,
     url="http://github.com/pinax/pinax-teams/",
@@ -79,7 +79,7 @@ setup(
     install_requires=[
         "django>=2.2",
         "django-reversion>=2.0.12",
-        "pinax-invitations>=6.1.2",
+        "zerxis-invitations>=6.1.2",
         "python-slugify>=3.0.4",
         "Pillow>=2.3.0",
         "django-user-accounts>=2.0.3",

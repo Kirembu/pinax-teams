@@ -3,7 +3,7 @@ from functools import WRAPPER_ASSIGNMENTS, wraps
 from django.http import Http404
 from django.shortcuts import get_object_or_404
 
-from account.decorators import login_required
+from zerxis_account.decorators import login_required
 
 from .models import Membership, Team
 

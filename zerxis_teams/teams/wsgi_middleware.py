@@ -13,5 +13,5 @@ class WSGITeamMiddleware():
         if m:
             environ["SCRIPT_NAME"] = m.group(1)
             environ["PATH_INFO"] = m.group(3)
-            environ["pinax.team"] = m.group(2)
+            environ["zerxis_teams.team"] = m.group(2)
         return self.app(environ, start_repsonse)

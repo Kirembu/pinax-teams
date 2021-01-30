@@ -9,7 +9,7 @@ from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
-from pinax.invitations.models import JoinInvitation
+from zerxis.invitations.models import JoinInvitation
 from reversion import revisions as reversion
 from slugify import slugify
 
@@ -212,7 +212,7 @@ class Team(BaseTeam):
         verbose_name_plural = _("Teams")
 
     def get_absolute_url(self):
-        return reverse("pinax_teams:team_detail", args=[self.slug])
+        return reverse("zerxis_teams:team_detail", args=[self.slug])
 
     def __str__(self):
         return self.name

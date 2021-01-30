@@ -1,4 +1,4 @@
 include AUTHORS
 include LICENSE
 include README.md
-recursive-include zerxis/teams/locale *
+recursive-include zerxis_teams/teams/locale *

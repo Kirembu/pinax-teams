@@ -47,7 +47,7 @@ class TeamDefaultHookset():
 class HookProxy():
 
     def __getattr__(self, attr):
-        from pinax.teams.conf import settings
+        from zerxis_teams.teams.conf import settings
         return getattr(settings.PINAX_TEAMS_HOOKSET, attr)
 
 

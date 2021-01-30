@@ -1,8 +1,9 @@
 import re
 
 from django.http import Http404
+from django.http import HttpResponse
 
-from account.utils import handle_redirect_to_login
+from zerxis_account.utils import handle_redirect_to_login
 
 from .conf import settings
 from .models import Membership, Team
@@ -21,10 +22,19 @@ def check_team_allowed(request):
     return handle_redirect_to_login(request, redirect_field_name="next")
 
 
-class TeamMiddleware:
+class TeamMiddleware(object):
+
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        return self.get_response(request)
+
+    def process_exception(self, request, exception):
+        return HttpResponse(exception)
 
     def process_request(self, request):
-        team_slug = request.environ.get("pinax.team")
+        team_slug = request.environ.get("zerxis_teams.team")
         if team_slug is not None:
             try:
                 team = Team.objects.get(slug=team_slug)

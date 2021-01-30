@@ -22,18 +22,18 @@ DEFAULT_SETTINGS = dict(
         "django.contrib.auth.middleware.AuthenticationMiddleware",
         "django.contrib.messages.middleware.MessageMiddleware"
     ],
-    ROOT_URLCONF = "pinax.teams.tests.urls",
+    ROOT_URLCONF = "zerxis_teams.teams.tests.urls",
     INSTALLED_APPS = [
         "django.contrib.auth",
         "django.contrib.contenttypes",
         "django.contrib.sessions",
         "django.contrib.sites",
 
-        "account",
-        "pinax.invitations",
-        "pinax.templates",
-        "pinax.teams",
-        "pinax.teams.tests",
+        "zerxis_account",
+        "zerxis.invitations",
+        #"pinax.templates",
+        "zerxis_teams.teams",
+        "zerxis_teams.teams.tests",
     ],
     SITE_ID = 1,
     SECRET_KEY = "notasecret",
@@ -64,7 +64,7 @@ def runtests(*test_args):
     try:
         from django.test.runner import DiscoverRunner
         runner_class = DiscoverRunner
-        test_args = ["pinax.teams.tests"]
+        test_args = ["zerxis_teams.teams.tests"]
     except ImportError:
         from django.test.simple import DjangoTestSuiteRunner
         runner_class = DjangoTestSuiteRunner

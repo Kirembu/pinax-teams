@@ -2,7 +2,7 @@ import json
 
 from django.contrib.auth.models import User
 
-from pinax.teams.models import Membership, Team, avatar_upload
+from zerxis_teams.teams.models import Membership, Team, avatar_upload
 from test_plus.test import TestCase
 
 
@@ -326,7 +326,7 @@ class ViewTests(BaseTeamTests):
 
         with self.login(self.user):
             response = self.post(
-                "pinax_teams:team_member_promote",
+                "zerxis_teams:team_member_promote",
                 slug=team.slug,
                 pk=membership.pk,
             )
@@ -340,7 +340,7 @@ class ViewTests(BaseTeamTests):
 
         with self.login(self.user):
             response = self.post(
-                "pinax_teams:team_member_demote",
+                "zerxis_teams:team_member_demote",
                 slug=team.slug,
                 pk=membership.pk,
             )
@@ -354,7 +354,7 @@ class ViewTests(BaseTeamTests):
 
         with self.login(self.user):
             response = self.post(
-                "pinax_teams:team_member_remove",
+                "zerxis_teams:team_member_remove",
                 slug=team.slug,
                 pk=membership.pk,
             )
@@ -367,7 +367,7 @@ class ViewTests(BaseTeamTests):
 
         with self.login(self.user):
             response = self.post(
-                "pinax_teams:team_member_resend_invite",
+                "zerxis_teams:team_member_resend_invite",
                 slug=team.slug,
                 pk=membership.pk,
             )
@@ -380,7 +380,7 @@ class ViewTests(BaseTeamTests):
 
         with self.login(self.user):
             response = self.post(
-                "pinax_teams:team_member_revoke_invite",
+                "zerxis_teams:team_member_revoke_invite",
                 slug=team.slug,
                 pk=membership.pk,
             )
@@ -396,7 +396,7 @@ class ViewTests(BaseTeamTests):
         }
         with self.login(self.user):
             response = self.post(
-                "pinax_teams:team_invite",
+                "zerxis_teams:team_invite",
                 slug=team.slug,
                 data=post_data,
             )
@@ -416,7 +416,7 @@ class ViewTests(BaseTeamTests):
         }
         with self.login(self.user):
             response = self.post(
-                "pinax_teams:team_invite",
+                "zerxis_teams:team_invite",
                 slug=team.slug,
                 data=post_data,
             )

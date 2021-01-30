@@ -16,9 +16,9 @@ from django.views.decorators.http import require_POST
 from django.views.generic import FormView, ListView, TemplateView
 from django.views.generic.edit import CreateView
 
-from account.decorators import login_required
-from account.mixins import LoginRequiredMixin
-from account.views import SignupView
+from zerxis_account.decorators import login_required
+from zerxis_account.mixins import LoginRequiredMixin
+from zerxis_account.views import SignupView
 
 from .decorators import manager_required, team_required
 from .forms import TeamForm, TeamInviteUserForm, TeamSignupForm

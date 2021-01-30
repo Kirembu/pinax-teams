@@ -9,9 +9,9 @@ except ImportError:
 
 class AppConfig(BaseAppConfig):
 
-    name = "pinax.teams"
-    label = "pinax_teams"
-    verbose_name = _("Pinax Teams")
+    name = "zerxis_teams.teams"
+    label = "zerxis_teams"
+    verbose_name = _("Zerxis Teams")
 
     def ready(self):
-        importlib.import_module("pinax.teams.receivers")
+        importlib.import_module("zerxis_teams.teams.receivers")
