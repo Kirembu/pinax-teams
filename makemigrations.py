@@ -6,7 +6,7 @@ import django
 
 
 def run(*args):
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pinax.teams.tests.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "zerxis_teams.teams.tests.settings")
     django.setup()
 
     parent = os.path.dirname(os.path.abspath(__file__))
@@ -14,7 +14,7 @@ def run(*args):
 
     django.core.management.call_command(
         "makemigrations",
-        "pinax_teams",
+        "zerxis_teams",
         *args
     )
 
