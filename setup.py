@@ -55,7 +55,7 @@ setup(
     name="zerxis-teams",
     long_description=LONG_DESCRIPTION,
     version=VERSION,
-    url="http://github.com/pinax/pinax-teams/",
+    url="http://github.com/zerxis/zerxis-teams/",
     license="MIT",
     packages=find_packages(),
     package_data={
@@ -82,7 +82,7 @@ setup(
         "zerxis-invitations>=6.1.2",
         "python-slugify>=3.0.4",
         "Pillow>=2.3.0",
-        "django-user-accounts>=2.0.3",
+        "zerxis-user-accounts>=2.0.3",
         "six>=1.9.0"
     ],
     tests_require=[
